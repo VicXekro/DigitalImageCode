@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="393.0" prefWidth="250.0" style="-fx-background-color: white;">
+         <children>
+            <JFXToggleButton fx:id="linearMaskToggleButton" layoutY="7.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="187.0" text="Predefine Linear Filter" toggleColor="#eb0202" unToggleColor="#00c3ff" unToggleLineColor="#91ddeb">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Switch between Predefine Linear Filter and Custom Linear Filter" />
+               </tooltip>
+            </JFXToggleButton>
+            <StackPane layoutY="39.0" prefHeight="499.0" prefWidth="250.0">
+               <children>
+                  <AnchorPane fx:id="customLinearFilterAnchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Pane fx:id="customLinearMaskControlCreationPanel" layoutX="18.0" layoutY="52.0">
+                           <children>
+                              <JFXTextField fx:id="customLinearMaskNCTextField" focusColor="BLACK" labelFloat="true" maxWidth="209.0" minWidth="159.0" prefHeight="31.0" prefWidth="209.0" promptText="Number of Column" />
+                              <JFXTextField fx:id="customLinearMaskNLTextField" focusColor="BLACK" labelFloat="true" layoutY="46.0" maxWidth="209.0" minWidth="160.0" prefHeight="31.0" prefWidth="209.0" promptText="Number of Line" />
+                              <JFXComboBox fx:id="customLinearMaskBorderFillingComboBox" layoutX="3.0" layoutY="83.0" prefHeight="25.0" prefWidth="203.0" promptText="Border Filling" />
+                              <JFXButton fx:id="customLinearMaskOKButton" layoutX="3.0" layoutY="122.0" onAction="#customLinearMaskOKButtonOnAction" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: black;" text="OK" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Regular" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <GridPane fx:id="customLinearMaskgridPane" alignment="CENTER" layoutX="21.0" layoutY="219.0" prefHeight="199.0" prefWidth="203.0">
+                          <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints minWidth="-Infinity" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                          </rowConstraints>
+                        </GridPane>
+                        <JFXButton fx:id="customLinearMaskValidateButton" layoutX="21.0" layoutY="433.0" onAction="#customLinearMaskValidateButtonOnAction" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: black;" text="Validate" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="148.0" layoutY="14.0" onAction="#customLinearMaskNewLinearMaskButtonOnAction" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: black;" text="New" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="predefineLinearFilterAnchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton layoutX="48.0" layoutY="240.0" onAction="#predefLinearMaskValidateButtonOnAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: black;" text="Validate" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXComboBox fx:id="predefLinearMaskBorderFillingComboBox" layoutX="48.0" layoutY="173.0" prefWidth="149.0" promptText="Border Filling" />
+                        <JFXComboBox fx:id="predefLinearMaskTypeComboBox" layoutX="48.0" layoutY="39.0" prefHeight="25.0" prefWidth="149.0" promptText="Type" />
+                        <JFXComboBox fx:id="predefLinearMaskDirectionComboBox" layoutX="48.0" layoutY="105.0" prefHeight="25.0" prefWidth="149.0" promptText="Direction" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

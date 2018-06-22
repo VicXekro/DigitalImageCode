@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="461.0" style="-fx-background-color: black;" stylesheets="@../Resources/CSS/DigitalImageCodeCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="7.0" prefHeight="238.0" prefWidth="135.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="289.0" fitWidth="158.0">
+               <image>
+                  <Image url="@../Resources/Icon/mask.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="190.0" layoutY="14.0" text="D.I.C.e" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="198.0" layoutY="151.0" opacity="0.68" text="Version: 1.0" textFill="WHITE" />
+      <Line endX="155.0" layoutX="300.0" layoutY="100.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+      <Label layoutX="201.0" layoutY="109.0" text="Digital Image Code experience" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="200.0" opacity="0.68" text="Author: YOUDOM KEMMOE Victor" textFill="WHITE" />
+   </children>
+</AnchorPane>

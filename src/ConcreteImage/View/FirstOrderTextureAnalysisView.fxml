@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="437.0">
+         <children>
+            <JFXTextField fx:id="firstOrderImageWindowNC" focusColor="BLACK" labelFloat="true" layoutX="158.0" layoutY="15.0" maxWidth="127.0" minWidth="127.0" prefHeight="31.0" prefWidth="127.0" promptText="Number Of Columns">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="firstOrderImageWindowNL" focusColor="BLACK" labelFloat="true" layoutX="285.0" layoutY="15.0" maxWidth="127.0" minWidth="127.0" prefHeight="31.0" prefWidth="127.0" promptText="Number Of Lines">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="firstOrderBorderFilling" layoutX="161.0" layoutY="59.0" prefHeight="25.0" prefWidth="248.0" promptText="Border Filling" />
+            <JFXComboBox fx:id="firstOrderStatisticalParameter" layoutX="161.0" layoutY="104.0" prefHeight="25.0" prefWidth="249.0" promptText="Statistical Parameter" />
+            <JFXButton layoutX="160.0" layoutY="154.0" onAction="#fisrtOrderValidateButtonOnAction" prefHeight="25.0" prefWidth="251.0" style="-fx-background-color: black;" text="Validate" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="22.0" text="Image Window definition:">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

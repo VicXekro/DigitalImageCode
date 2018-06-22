@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="238.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField fx:id="NCTextfield" editable="false" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="24.0" maxWidth="236.0" minWidth="236.0" prefHeight="31.0" prefWidth="236.0" promptText="Number of column">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="NLTextfield" editable="false" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="81.0" maxWidth="236.0" minWidth="236.0" prefHeight="31.0" prefWidth="236.0" promptText="Number of line">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="nbrOfBandTextfield" editable="false" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="133.0" maxWidth="236.0" minWidth="236.0" prefHeight="31.0" prefWidth="236.0" promptText="Number of band">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="pixelPerBand" editable="false" focusColor="BLACK" labelFloat="true" layoutX="14.0" layoutY="184.0" maxWidth="236.0" minWidth="236.0" prefHeight="31.0" prefWidth="236.0" promptText="Number of pixel per band">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+#JSGF V1.0;
+
+grammar ConcreteImage;
+
+<dice> = dice;
+<convertToGreyscale> = [<dice>] (convert to greyscale| convert to black and white);
+<convertToNegative> = [<dice>] convert to negative;
+<undo> = [<dice>] (undo [action]|go back [to previous version]);
+<filterDirection> = zero | vertical | forty-five | one thirty-five;
+<linearFilter> = so belt | pre with | robert | kirsch;
+<filterToPerform> = <filterDirection> <linearFilter> ;
+<skeletise> = perform es tization;
+<close> = close [the application];
+
+<digit> = one | two | three | four | five | six | seven | eight | nine | ten | zero;
+
+public <command> = <convertToGreyscale> | <convertToNegative> | <undo>| <skeletise> |stop | <close>;
+public <linearFilter> = filter <filterToPerform>;

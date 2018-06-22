@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="647.0">
+         <children>
+            <StackPane layoutX="219.0" prefHeight="573.0" prefWidth="428.0">
+               <children>
+                  <AnchorPane fx:id="skeletisationAnchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXComboBox fx:id="skeletisationBorderFilling" layoutX="31.0" layoutY="33.0" prefHeight="25.0" prefWidth="367.0" promptText="Border Feeling" />
+                        <JFXButton layoutX="314.0" layoutY="94.0" onAction="#skeletisationValidateButtonOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #C8AD7F;" text="Validate" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="complexOperationAnchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton layoutX="14.0" layoutY="14.0" onAction="#complexOperationNewMaskButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #C8AD7F;" text="New Mask" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="complexOperationNC" focusColor="#c8ad7f" labelFloat="true" layoutX="20.0" layoutY="63.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="Number Of Column" />
+                        <JFXTextField fx:id="complexOperationNL" focusColor="#c8ad7f" labelFloat="true" layoutX="144.0" layoutY="63.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="Number Of Line" />
+                        <JFXTextField fx:id="complexOperationOrder" focusColor="#c8ad7f" labelFloat="true" layoutX="269.0" layoutY="63.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="Order" />
+                        <JFXComboBox fx:id="complexOperationBorderFilling" layoutX="23.0" layoutY="119.0" prefHeight="25.0" prefWidth="367.0" promptText="Border Feeling" />
+                        <JFXButton fx:id="complexOperationOKButton" layoutX="286.0" layoutY="235.0" onAction="#complexOperationOKButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #C8AD7F;" text="OK" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <GridPane fx:id="complexOperationGridPane" alignment="CENTER" layoutX="23.0" layoutY="268.0" prefHeight="255.0" prefWidth="367.0">
+                          <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                          </rowConstraints>
+                        </GridPane>
+                        <JFXButton fx:id="complexOperationValidateButton" layoutX="286.0" layoutY="534.0" onAction="#complexOperationValidateButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #C8AD7F;" text="Validate" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="complexOperationThreshold1" focusColor="#c8ad7f" labelFloat="true" layoutX="144.0" layoutY="170.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="From" />
+                        <JFXTextField fx:id="complexOperationThreshold2" focusColor="#c8ad7f" labelFloat="true" layoutX="268.0" layoutY="170.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="To" />
+                        <Label fx:id="complexOperationThresholdLabel" layoutX="26.0" layoutY="177.0" text="Threshold definition:">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="binarizeAnchorPane" layoutX="324.0" layoutY="190.0" prefHeight="563.0" prefWidth="428.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Threshold Definition:">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="binarizationThreshold1" focusColor="#c8ad7f" labelFloat="true" layoutX="14.0" layoutY="64.0" maxWidth="176.0" minWidth="91.0" prefHeight="31.0" prefWidth="176.0" promptText="From">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="binarizationThreshold2" focusColor="#c8ad7f" labelFloat="true" layoutX="198.0" layoutY="64.0" maxWidth="176.0" minWidth="91.0" prefHeight="31.0" prefWidth="176.0" promptText="To">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="286.0" layoutY="108.0" onAction="#binarizationValidateButtonOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #C8AD7F;" text="Validate" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <VBox layoutX="37.0" layoutY="14.0" spacing="15.0">
+               <children>
+                  <JFXRadioButton fx:id="binarizationRadioButton" layoutX="14.0" layoutY="80.0" text="Binarization">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="erosionRadioButton" layoutX="13.0" layoutY="111.0" text="Erosion">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="dilationRadioButton" layoutX="13.0" layoutY="142.0" text="Dilation">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="openingRadioButton" layoutX="13.0" layoutY="175.0" text="Opening">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="closureRadioButton" layoutX="13.0" layoutY="212.0" text="Closure">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="whiteTopHatRadioButton" layoutX="13.0" layoutY="247.0" text="White Top Hat">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="blackTopHatRadioButton" layoutX="19.0" layoutY="281.0" text="Black Top Hat">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="skeletisationRadioButton" layoutX="23.0" layoutY="317.0" text="Skeletisation">
+                     <font>
+                        <Font name="Roboto Regular" size="12.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

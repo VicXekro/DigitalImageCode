@@ -1,0 +1,86 @@
+"-fx-background-color: rgb("+homePageController.getImageBand().get(0).getBandTable()[i][j]+","
+                                                                    +homePageController.getImageBand().get(1).getBandTable()[i][j]+","
+                                                                    +homePageController.getImageBand().get(2).getBandTable()[i][j]+")"
+
+
+
+for(int i = 0; i<imageToDisplay.getNL(); i++){
+                    for(int j=0; j<imageToDisplay.getNC(); j++){
+                        AnchorPane anchorPane = new AnchorPane();
+                        anchorPane.setPrefHeight(10); anchorPane.setPrefWidth(10);
+                        anchorPane.setStyle("-fx-background-color: rgb("+homePageController.getImageBand().get(0).getBandTable()[i][j]+","
+                                +homePageController.getImageBand().get(1).getBandTable()[i][j]+","
+                                +homePageController.getImageBand().get(2).getBandTable()[i][j]+")");
+                        arrayOfColor[i][j]=anchorPane;
+                    }
+
+red = ((imageBand.get(0).getBandOrder()== 0)? (int)(imageBand.get(0).getBandTable()[i][j]): 0);
+                        green = ((imageBand.get(0).getBandOrder()== 1)? (int)(imageBand.get(0).getBandTable()[i][j]): 0);
+                        blue = ((imageBand.get(0).getBandOrder()== 2)? (int)(imageBand.get(0).getBandTable()[i][j]): 0);
+                        anchorPane.setStyle("-fx-background-color: rgb("+red+","+green+"," +blue+")");
+
+
+ String s = "";
+        for (int i = 0; i <bandTablesBordered.size() ; i++) {
+            for (int j = 0; j <bandTablesBordered.get(0).length ; j++) {
+                for (int k = 0; k <bandTablesBordered.get(0)[0].length ; k++) {
+                    s+= bandTablesBordered.get(i)[j][k]+ "\t";
+                }
+                s+="\n";
+            }
+            s+="\n \n";
+        }
+        System.out.print(s);
+
+
+   @Override
+     public void start(Stage primaryStage) throws Exception {
+         //primaryStage.initStyle(StageStyle.UNDECORATED);
+         primaryStage.setScene(new Scene(new LoaderProvider().preloaderLoader(primaryStage)));
+         primaryStage.setTitle("Digital Image Code Experience");
+         primaryStage.show();
+     }
+
+     public static void main (String[]args){
+         launch(args);
+     }
+
+
+//Preloader
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                int a = 0, b = 0;
+                for (int i = 0; i <100 ; i++) {
+                    b =(int) (Math.random()*10);
+                    b = ((b<0)?(b*-1):b);
+                    a += b;
+                    updateProgress(a,70);
+                    Thread.sleep(100);
+                }
+                return null;
+            }
+        };
+        progressBar.progressProperty().bind(task.progressProperty());
+        task.setOnSucceeded(e->{
+            this.stage.close();
+        });
+        task.setOnFailed(event -> {
+            task.getException().printStackTrace();
+        });
+        new Thread(task).start();
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+//Texture first order
+String s = "";
+        for (int i = 0; i <probability.length; i++) {
+          s += "Probability of " + i+ ": "+ probability[i]+"\n";
+        }
+        System.out.println(s);

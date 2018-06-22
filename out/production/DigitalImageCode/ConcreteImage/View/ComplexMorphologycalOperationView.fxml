@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="407.0">
+         <children>
+            <JFXButton layoutX="24.0" layoutY="24.0" onAction="#complexOperationNewMaskButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: black;" text="New Mask" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="complexOperationNC" focusColor="BLACK" labelFloat="true" layoutX="21.0" layoutY="75.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="Number Of Column" />
+            <JFXTextField fx:id="complexOperationNL" focusColor="BLACK" labelFloat="true" layoutX="145.0" layoutY="75.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="Number Of Line" />
+            <JFXTextField fx:id="complexOperationOrder" focusColor="BLACK" labelFloat="true" layoutX="270.0" layoutY="75.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="Order" />
+            <JFXComboBox fx:id="complexOperationBorderFilling" layoutX="24.0" layoutY="131.0" prefHeight="25.0" prefWidth="367.0" promptText="Border Feeling" />
+            <JFXTextField fx:id="complexOperationThreshold1" focusColor="BLACK" labelFloat="true" layoutX="145.0" layoutY="182.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="From" />
+            <JFXTextField fx:id="complexOperationThreshold2" focusColor="BLACK" labelFloat="true" layoutX="269.0" layoutY="182.0" maxWidth="176.0" minWidth="124.0" prefHeight="31.0" prefWidth="124.0" promptText="To" />
+            <JFXButton fx:id="complexOperationOKButton" layoutX="289.0" layoutY="221.0" onAction="#complexOperationOKButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: black;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXButton>
+            <GridPane fx:id="complexOperationGridPane" alignment="CENTER" layoutX="24.0" layoutY="252.0" prefHeight="255.0" prefWidth="367.0">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+            <JFXButton fx:id="complexOperationValidateButton" layoutX="288.0" layoutY="518.0" onAction="#complexOperationValidateButtonOnAction" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: black;" text="Validate" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="complexOperationThresholdLabel" layoutX="27.0" layoutY="189.0" text="Threshold definition:">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

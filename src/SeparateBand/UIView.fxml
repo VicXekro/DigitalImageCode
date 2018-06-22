@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeparateBand.Controller">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="801.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="39.0" layoutY="33.0">
+               <children>
+                  <TextField fx:id="sizeOfBand" layoutX="112.0" onKeyReleased="#siezeOfBandsKeyReleased" prefHeight="25.0" prefWidth="185.0" />
+                  <TextField fx:id="bands" layoutX="112.0" layoutY="182.0" onKeyReleased="#bandsKeyReleased" prefHeight="25.0" prefWidth="185.0" />
+                  <ComboBox fx:id="creationType" layoutX="112.0" layoutY="227.0" prefHeight="25.0" prefWidth="185.0" />
+                  <ComboBox fx:id="format" layoutX="112.0" layoutY="145.0" prefHeight="25.0" prefWidth="185.0" />
+                  <Label layoutX="17.0" layoutY="4.0" text="Size of the band:" />
+                  <Label fx:id="NCError" layoutX="112.0" layoutY="77.0" prefHeight="17.0" prefWidth="185.0" textFill="RED" />
+                  <Label layoutX="62.0" layoutY="149.0" text="Format:" />
+                  <Label layoutX="1.0" layoutY="56.0" text="Number of column:" />
+                  <Label fx:id="bandError" layoutX="112.0" layoutY="207.0" prefHeight="17.0" prefWidth="185.0" textFill="RED" />
+                  <Label fx:id="NLErro" layoutX="112.0" layoutY="124.0" prefHeight="17.0" prefWidth="185.0" textFill="RED" />
+                  <Label layoutX="58.0" layoutY="231.0" text="Creation:" />
+                  <Label fx:id="sizeOfBandError" layoutX="112.0" layoutY="25.0" prefHeight="17.0" prefWidth="185.0" textFill="RED" />
+                  <Button fx:id="generateButton" layoutY="307.0" mnemonicParsing="false" onAction="#generateButtonOnAction" prefHeight="25.0" prefWidth="300.0" text="Generate" />
+                  <Label layoutX="5.0" layoutY="186.0" text="Number of bands:" />
+                  <TextField fx:id="NC" layoutX="112.0" layoutY="52.0" onKeyReleased="#NCKeyReleased" prefHeight="25.0" prefWidth="185.0" />
+                  <Label layoutX="20.0" layoutY="103.0" text="Number of line:" />
+                  <TextField fx:id="NL" layoutX="112.0" layoutY="99.0" onKeyReleased="#NLKeyReleased" prefHeight="25.0" prefWidth="185.0" />
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="scrollPane" layoutX="358.0" layoutY="32.0" prefHeight="54.0" prefWidth="405.0" />
+            <ScrollPane fx:id="result" layoutX="358.0" layoutY="99.0" prefHeight="267.0" prefWidth="405.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

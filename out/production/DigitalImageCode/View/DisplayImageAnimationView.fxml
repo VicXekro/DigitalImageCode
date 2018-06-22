@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="554.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane fx:id="gridPane" layoutX="14.0" layoutY="24.0" prefHeight="410.0" prefWidth="392.0">
+        <columnConstraints>
+          <ColumnConstraints />
+          <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+        </rowConstraints>
+      </GridPane>
+      <JFXButton layoutX="411.0" layoutY="24.0" onAction="#startAnimationOnAction" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #00d410;" text="Start the animation" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="ZOIBinarizeButton" layoutX="411.0" layoutY="58.0" onAction="#ZOIBinarizeOnAction" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #00d410;" text="ZOI Binarize version" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="444.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="9.0" prefWidth="527.0" progress="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="425.0">
+         <children>
+            <JFXComboBox fx:id="secondOrderDirectionCombobox" layoutX="169.0" layoutY="14.0" prefHeight="25.0" prefWidth="110.0" />
+            <JFXTextField fx:id="secondOrderImageWindowNC" focusColor="BLACK" labelFloat="true" layoutX="160.0" layoutY="68.0" maxWidth="122.0" minWidth="122.0" prefHeight="31.0" prefWidth="122.0" promptText="Number of columns">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="secondOrderImageWindowNL" focusColor="BLACK" labelFloat="true" layoutX="282.0" layoutY="68.0" maxWidth="122.0" minWidth="122.0" prefHeight="31.0" prefWidth="122.0" promptText="Number of lines">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="secondOrderInterPixelDistance" focusColor="BLACK" labelFloat="true" layoutX="163.0" layoutY="120.0" maxWidth="240.0" minWidth="122.0" prefHeight="31.0" prefWidth="240.0" promptText="Inter Pixel distance">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="secondOrderBorderFillingCombobox" layoutX="169.0" layoutY="173.0" prefHeight="25.0" prefWidth="228.0" promptText="Border filling" />
+            <JFXComboBox fx:id="secondOrderTextureParameterCombobox" layoutX="169.0" layoutY="228.0" prefHeight="25.0" prefWidth="231.0" promptText="Texture parameter" />
+            <JFXButton layoutX="169.0" layoutY="281.0" onAction="#secondOrderValidateButtonOnAction" prefHeight="25.0" prefWidth="231.0" style="-fx-background-color: black;" text="Validate" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="75.0" text="Image Wiindow definition:">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="26.0" text="Direction:">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

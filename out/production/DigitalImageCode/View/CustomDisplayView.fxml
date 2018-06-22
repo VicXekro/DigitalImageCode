@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="vBoxValues" alignment="CENTER" layoutX="129.0" layoutY="20.0" prefHeight="447.0" prefWidth="434.0" />
+      <JFXButton layoutX="225.0" layoutY="503.0" onAction="#validateButtonOnAction" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #00d410;" text="Validate" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="31.0" layoutY="20.0" onAction="#newThresholdOnAction" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #00d410;" text="New threshold" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

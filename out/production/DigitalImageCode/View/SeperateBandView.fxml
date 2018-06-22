@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="647.0" style="-fx-background-color: white;" stylesheets="@../Resources/CSS/DigitalImageCodeCSS.css">
+         <children>
+            <JFXButton fx:id="deleteBandButton" layoutX="477.0" layoutY="33.0" onAction="#deleteBandOnAction" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #3fa9f5;" text="Delete Bands" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="restoreImageBandButton" layoutX="477.0" layoutY="70.0" style="-fx-background-color: #3fa9f5;" text="Restore Original Image" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <TableView fx:id="bandTable" layoutX="19.0" layoutY="33.0" prefHeight="515.0" prefWidth="447.0">
+              <columns>
+                <TableColumn fx:id="orderColumn" prefWidth="37.0" text="Order" />
+                <TableColumn fx:id="bandColumn" prefWidth="408.0" text="Bands" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

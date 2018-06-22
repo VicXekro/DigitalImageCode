@@ -1,0 +1,24 @@
+.jfx-combo-box:disabled {
+     -fx-opacity: 1;
+ }
+
+.animated-option-button{
+    -fx-pref-width: 58px;
+    -fx-background-color: white;
+    -fx-background-radius: 32px;
+    -fx-pref-height: 58px;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-radius: 50px;
+    /*-fx-border-width: 4px;*/
+}
+
+/*
+.progress-indicator:indeterminate > .spinner {
+    !** Applying to undo styling from .spinner, reported in RT-37965 *!
+    -fx-background-color: red;
+    !* originally was *!
+    !*-fx-background-color: transparent;*!
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}*/

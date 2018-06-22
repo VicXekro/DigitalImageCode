@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.bufferedImage.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="19.0" prefWidth="980.0" style="-fx-background-color: #EEEEEE;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton layoutY="-1.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#backButtonOnAction" prefHeight="29.0" prefWidth="41.0" text=" ">
+               <tooltip>
+                  <Tooltip text="Back" />
+               </tooltip>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../Resources/Icon/ic_arrow_back_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <MenuBar layoutX="40.0" prefHeight="30.0" prefWidth="453.0" style="-fx-background-color: EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="487.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openOnAction" text="Open...">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#saveOnAction" text="Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#closeMenuOnAction" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#undoMenuOnAction" text="Undo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <Menu mnemonicParsing="false" text="Select default border filling">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#zeroMethoMenuItemOnAction" text="Zero" />
+                              <MenuItem mnemonicParsing="false" onAction="#symmetricMethoMenuItemOnAction" text="Symmetric" />
+                              <MenuItem mnemonicParsing="false" onAction="#circularMethoMenuItemOnAction" text="Circular" />
+                          </items>
+                        </Menu>
+                     </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Object">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#infoAboutImage" text="Information about the Image" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Effect">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#convertToGrayScaleOnAction" text="Grayscale">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="G" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#negativeMenuOnAction" text="Negative">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <Menu mnemonicParsing="false" text="Filter">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#linearFilterMenuOnAction" text="Linear Filter" />
+                              <MenuItem mnemonicParsing="false" onAction="#adaptativeMenuOnAction" text="Adaptative Filter" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Morphologycal Operation">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#binarizationMenuOnAction" text="Binarization">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#erosionMenuOnAction" text="Erosion">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#dilationMenuOnAction" text="Dilation">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#openingMenuOnAction" text="Opening">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#closureMenuOnAction" text="Closure">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#whiteTopHatMenuOnAction" text="White Top Hat">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#blackTopHatMenuOnAction" text="Black Top Hat">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#skeletisationMenuOnAction" text="Skeletisation">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                          </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Texture Analysis">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#firstOrderMenuOnAction" text="First Order" />
+                        <MenuItem mnemonicParsing="false" onAction="#secondOrderMenuOnAction" text="Second Order" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#aboutMenuOnAction" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label layoutX="738.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="117.0" text="Default Border Filling: ">
+               <font>
+                  <Font name="Roboto Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="borderFillingLabelNotification" layoutX="855.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="57.0" text="Symmetric">
+               <font>
+                  <Font name="Roboto Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="speechButton" layoutX="931.0" layoutY="-2.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#speechButtonOnAction" prefHeight="32.0" prefWidth="41.0" text=" ">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../Resources/Icon/ic_mic_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="progressHbox" layoutX="528.0" layoutY="5.0" text="processing..." textFill="#0088ff">
+               <font>
+                  <Font name="Roboto Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <StackPane fx:id="stackPaneDisplayer" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

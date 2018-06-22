@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="790.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="763.0">
+         <tooltip>
+            <Tooltip text="If value is not set, it will be supposed as zero" />
+         </tooltip>
+      </ScrollPane>
+      <JFXButton layoutX="715.0" layoutY="69.0" onAction="#validateOnAction" style="-fx-background-color: black;" text="Validate" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="fillButton" layoutX="646.0" layoutY="69.0" onAction="#fillOnAction" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: black;" text="Fill" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Fill automatically the rest of values" />
+         </tooltip>
+      </JFXButton>
+      <Label fx:id="errorLabel" layoutX="14.0" layoutY="73.0" prefHeight="17.0" prefWidth="623.0" textFill="RED">
+         <font>
+            <Font name="Roboto Regular" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
